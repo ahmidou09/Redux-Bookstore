@@ -5,3 +5,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+span {
+  padding: 1rem;
+  margin: 0 1rem;
+}
+
+.individual-book {
+  display: flex;
+  margin: 1rem 0;
+}
