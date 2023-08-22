@@ -10,7 +10,7 @@ function BookForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addBook({
-      id: Date.now(),
+      id: Date.now().toString(),
       author,
       title,
     }));

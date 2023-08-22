@@ -20,7 +20,7 @@ function IndividualBook({ id, title, author }) {
 }
 
 IndividualBook.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };
