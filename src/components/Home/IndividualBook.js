@@ -1,28 +1,49 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropType from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../../redux/books/booksSlice';
+import { removeBookAsync } from '../../redux/books/booksSlice';
+import APP_ID from '../../redux/id';
 
-function IndividualBook({ id, title, author }) {
+function IndividualBook({ id, book }) {
+  const {
+    category,
+    title,
+    author,
+  } = book;
   const dispatch = useDispatch();
+
   const handleDelete = () => {
-    dispatch(removeBook(id));
+    dispatch(
+      removeBookAsync({
+        APP_ID,
+        itemID: id,
+      }),
+    );
   };
+
   return (
-    <div className="individual-book">
-      <div>
-        <span>{title}</span>
-        <span>{author}</span>
-      </div>
-      <button type="button" className="btn btn-delete" onClick={handleDelete}>Delete</button>
+    <div className="book">
+      <header className="book-header">
+        <span className="book-category">{category}</span>
+        <h2 className="book-title">{title}</h2>
+        <h3 className="book-author">{author}</h3>
+        <div className="book-actions">
+          <button type="button" className="btn btn-delete" onClick={handleDelete}>
+            Delete
+          </button>
+        </div>
+      </header>
     </div>
   );
 }
 
 IndividualBook.propTypes = {
-  id: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  id: PropType.string.isRequired,
+  book: PropType.shape({
+    category: PropType.string.isRequired,
+    title: PropType.string.isRequired,
+    author: PropType.string.isRequired,
+  }).isRequired,
 };
 
 export default IndividualBook;
