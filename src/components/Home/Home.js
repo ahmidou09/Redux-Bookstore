@@ -3,8 +3,8 @@ import BookList from './BookList';
 
 const Home = () => (
   <div>
-    <BookForm />
     <BookList />
+    <BookForm />
   </div>
 );
 

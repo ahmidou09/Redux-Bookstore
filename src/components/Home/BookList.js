@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import './BookList.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchBooks } from '../../redux/books/booksSlice';
 import APP_ID from '../../redux/id';
@@ -13,13 +14,13 @@ function BookList() {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="card">
       {loading ? (
-        <p>Loading...</p>
+        <p className="loading">Loading...</p>
       ) : (
-        <ul className="list">
+        <ul className="book-list">
           {books.map((book) => (
-            <li className="list-item" key={book.item_id}>
+            <li className="book-item" key={book.item_id}>
               <IndividualBook id={book.item_id} book={book} />
             </li>
           ))}
