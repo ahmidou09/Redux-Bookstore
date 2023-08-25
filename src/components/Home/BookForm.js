@@ -8,7 +8,7 @@ function BookForm() {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState('Action');
 
   const handleSubmit = (e) => {
     e.preventDefault();
