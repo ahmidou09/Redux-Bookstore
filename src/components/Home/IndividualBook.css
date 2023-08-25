@@ -26,11 +26,12 @@
   background-color: transparent;
   cursor: pointer;
   border: none;
+  font-family: var(--font-display);
+  color: var(--color-secondary);
 }
 
 .title,
-.author,
-.button {
+.author {
   font-family: var(--font-display);
 }
 
@@ -38,9 +39,8 @@
   margin: 0.24em 0 0 0;
 }
 
-.author,
-.button {
-  color: var(--color-primary);
+.author {
+  color: var(--color-secondary);
   font-weight: 400;
 }
 
