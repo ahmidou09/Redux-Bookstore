@@ -9,6 +9,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
     - [Future Features](#future-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Test](#test)
@@ -53,6 +54,10 @@
 - **Improve the UI/UX with more visually appealing styles and animations.**
 - **Implement search and filtering functionality for easier navigation of the book collection.**
 - **Add the ability to mark books as read/unread or add additional metadata such as genre or rating.**
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://redux-bookstore.onrender.com/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
